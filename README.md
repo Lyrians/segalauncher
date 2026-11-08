@@ -26,3 +26,21 @@ Desde la versión 1.1.0, presioná **F5** en la biblioteca para buscar una versi
 Si tenés la primera versión, instalá la versión nueva sobre la anterior, sin desinstalarla.
 
 Este repositorio se utiliza para publicar las descargas y la información del programa. El código de desarrollo se mantiene por separado.
+
+## Capturas
+
+### Inicio
+
+![Pantalla de inicio de Sega Launcher](assets/sega-launcher-inicio.png)
+
+### Biblioteca de juegos
+
+![Biblioteca de juegos de Sega Launcher](assets/sega-launcher-biblioteca.png)
+
+### Actualizaciones
+
+![Búsqueda de actualizaciones de Sega Launcher](assets/sega-launcher-actualizaciones.png)
+
+### Configuración de controles
+
+![Configuración de controles de Sega Launcher](assets/sega-launcher-controles.png)

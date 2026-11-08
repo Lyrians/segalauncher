@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080d10"><meta name="description" content="Sega Launcher. Una biblioteca de 25 clásicos con alma de terminal.">
+  <title>Sega Launcher — LyriansP</title><link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#biblioteca">Ir a la biblioteca</a>
+<div class="boot" id="boot" hidden role="dialog" aria-modal="true" aria-labelledby="boot-title">
+  <div class="boot-inner"><p class="overline" id="boot-title">SEGA LAUNCHER / INICIO</p><div class="brand" data-brand></div>
+  <div class="boot-meter"><span>INICIANDO INTERFAZ<span class="blink">_</span></span><span id="boot-number">00%</span></div>
+  <div class="progress" role="progressbar" aria-label="Animación de inicio" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="boot-fill"></div></div></div>
+</div>
+<div class="shell" id="page">
+  <div class="system-bar"><span><i class="led"></i> SEGA LAUNCHER <span class="muted">/ WEB EDITION 01</span></span></div>
+  <header class="masthead"><div class="brand" data-brand></div><p class="brand-caption">UN RINCÓN DE 16 BITS EN LA WEB.</p></header>
+  <nav class="navigation" aria-label="Navegación principal"><a class="active" href="#inicio">[01] Inicio</a><a href="#biblioteca">[02] Biblioteca</a><a href="#manual">[03] Manual</a><a href="https://github.com/Lyrians/segalauncher" target="_blank" rel="noopener noreferrer">[04] GitHub ↗</a></nav>
+  <main>
+    <section class="intro" id="inicio"><div><p class="overline"><span class="accent">&gt;</span> BIENVENIDO A LA ZONA DE JUEGO</p><h1>Los clásicos nunca<br>cierran sesión<span class="blink accent">_</span></h1><p class="intro-copy"><span data-game-count>25</span> juegos de Sega Genesis. Una biblioteca, unas flechas y toda una época por volver a jugar.</p><div class="actions"><a class="primary" href="https://github.com/Lyrians/segalauncher/releases/latest">↓ Descargar launcher</a><a class="text-link" href="#biblioteca">Explorar biblioteca →</a></div><p class="small muted">PARA WINDOWS / HECHO POR LYRIANSP</p></div>
+      <div class="controller-window"><div class="window-title"><span>dispositivo_01.txt</span><span aria-hidden="true">─ □ ×</span></div><pre class="controller" aria-label="Ilustración de un control de seis botones">          ______________________
+      ___/                      \___
+     /                              \
+    /      ┌───┐          <span>●  ●  ●</span>    \
+   |   ┌───┘   └───┐                  |
+   |   └───┐   ┌───┘      <b>●  ●  ●</b>     |
+    \      └───┘    ─────            /
+     \______                 _______/
+            \_______________/</pre><div class="device-footer"><span><i class="led"></i> 6 BOTONES</span><span>16-BIT / GENESIS</span></div></div>
+    </section>
+    <div class="section-heading" id="biblioteca"><div><p class="overline">/ ARCHIVOS / BIBLIOTECA</p><h2>Elegí tu próxima partida.</h2></div><span class="counter">[ <b>25</b> JUEGOS ]</span></div>
+    <section class="library" aria-label="Catálogo de juegos">
+      <div class="catalog panel"><div class="window-title"><span>library.exe</span><span class="muted">CATÁLOGO LOCAL</span></div><div class="filters"><label class="search"><span aria-hidden="true">&gt;_</span><input id="search" type="search" autocomplete="off" placeholder="Buscar un juego…" aria-label="Buscar juegos"><kbd>/</kbd></label><button id="favorites-filter" type="button" aria-pressed="false">☆ Favoritos</button></div><div class="table-head"><span>N.º / TÍTULO</span><span>FAV.</span></div><div id="games" class="games" aria-live="polite"></div><div class="pagination"><span id="result-count"></span><div><button id="previous" type="button" aria-label="Página anterior">←</button><span id="page-count"></span><button id="next" type="button" aria-label="Página siguiente">→</button></div></div></div>
+      <aside class="sidebar"><section class="panel selected-panel"><div class="window-title"><span>seleccion.txt</span><span aria-hidden="true">+</span></div><div class="selected-content"><p class="overline accent" id="selected-id">ARCHIVO 01 / 25</p><div class="pixel-label" aria-hidden="true">16<span>BIT</span></div><h3 id="selected-name">Aladdin</h3><p class="muted">SEGA GENESIS / MEGA DRIVE</p><div class="rule"></div><p>Esta web es el catálogo del proyecto. Para abrir los juegos, usá Sega Launcher en Windows.</p><button id="detail-favorite" type="button">☆ Guardar en favoritos</button></div></section><div class="note"><span class="accent">[i]</span><p>Los favoritos de esta web se guardan en este navegador. Son independientes de los del launcher.</p></div><div class="theme-picker"><span class="overline">COLOR DEL TERMINAL</span><div role="group" aria-label="Tema de colores"><button data-theme="cyan" class="swatch cyan" aria-label="Cian" aria-pressed="true"></button><button data-theme="green" class="swatch green" aria-label="Verde fósforo" aria-pressed="false"></button><button data-theme="amber" class="swatch amber" aria-label="Ámbar" aria-pressed="false"></button><button data-theme="purple" class="swatch purple" aria-label="Violeta" aria-pressed="false"></button></div></div></aside>
+    </section>
+    <section id="manual" class="manual"><div><p class="overline">/ LEEME.TXT</p><h2>Como antes.<br>Con tus propias teclas.</h2><p>Descargá el launcher desde GitHub, instalalo y elegí los controles en el primer inicio. El menú se recorre con el teclado.</p><a class="text-link" href="https://github.com/Lyrians/segalauncher/releases/latest">Abrir la última versión ↗</a></div><dl class="key-list"><div><dt><kbd>↑</kbd> <kbd>↓</kbd></dt><dd>Recorrer los juegos</dd></div><div><dt><kbd>Enter</kbd></dt><dd>Abrir la selección</dd></div><div><dt><kbd>C</kbd></dt><dd>Configurar controles</dd></div><div><dt><kbd>F5</kbd></dt><dd>Buscar actualizaciones</dd></div><div><dt><kbd>Esc</kbd></dt><dd>Volver o salir</dd></div></dl></section>
+  </main>
+  <footer><div><span class="accent">&gt;_</span> Creado por <strong>LyriansP</strong><p class="muted">Hecho con caracteres. Jugado con memoria.</p></div><div class="footer-links"><a href="https://taringas.net/perfil/LyriansP" target="_blank" rel="noopener noreferrer">Taringas ↗</a><a href="https://identi.io/usuario/LyriansP/" target="_blank" rel="noopener noreferrer">Identi ↗</a><a href="#inicio">Volver arriba ↑</a></div></footer>
+</div>
+<noscript><style>.games{display:none}</style><p>Activá JavaScript para explorar los 25 juegos y usar los favoritos. Podés descargar el launcher desde los enlaces de GitHub.</p></noscript>
+</body></html>
